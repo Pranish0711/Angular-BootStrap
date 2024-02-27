@@ -1,0 +1,14 @@
+<p>cart works!</p>
+<ol>
+    <li *ngFor="let item of PList">{{item}}</li> 
+</ol>
+<button type="button" (click)="rem()" class="btn btn-info">DELETE</button>
+<br><br><br><br><div class="div">
+<form (ngSubmit)="contact(x)" #x=ngForm>
+    Username:<input type="text" ngModel name="uname"><br>
+    Email:<input type="text" [ngModel]="email" name="email"><br>
+    PhoneNumber:<input type="text" [(ngModel)]="phone" name="phone">Phone.no= +91{{phone}}<br>
+
+    <input type="submit" value="send">
+</form>
+</div>

@@ -1,0 +1,57 @@
+<p>product works!</p>
+<p>Product name is: {{pname}}</p>
+<p>Availablity: {{pcount}}</p>
+
+
+<p *ngIf="Availablity(); else xxx" class="offer">Available at 50% offer</p>
+<ng-template #xxx>
+    <div class="alert alert-warning" role="alert">
+       Sorry! Soldout
+      </div>
+</ng-template>
+<button (click)="BuyProduct()" [disabled]="!Availablity()" soldout>BUY </button>
+
+
+<p>ProductName:</p><input type="text" [(ngModel)]="pname" >
+
+<ul>
+<li *ngFor="let item of ProductArray">{{item}}</li>
+</ul>
+
+{{x|date:'medium'}}
+
+<p>TicketsAvailablity: {{TicketsAvailable}}</p>
+
+<button (click)="BuyTickets()" >BUY</button>
+<input type="text" value="0"[(ngModel)]="Quantity" disabled >
+<button  (click)="RemoveTickets()">REMOVE</button>
+<br>
+<br>
+
+
+<div class="div" > 
+    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded" class="bs-success-text-emphasis">StudentsRegister</div><br>
+    
+    <div class="div2"> <label for="name" >Name: </label><br>
+        <label for="name" >DateOfBirth: </label><br>
+        <label for="name" >Class: </label><br>
+        <label for="name" >Division: </label><br>
+        <label for="name" >Gender: </label><br>
+        
+    </div>
+    <div class="div3">
+        <input type="text" id="name"><br>
+        <input type="date" id="dob"><br>
+        <select id="class" ><option hidden>Choose</option><option >Grade 1</option><option>Grade 2</option ><option>Grade 3</option><option>Grade 4</option><option>Grade 5</option><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11</option><option>Grade 12</option></select><br>
+        <select  id="division"><option hidden>Choose</option><option>DIV 1</option><option>DIV 2</option><option>DIV 3</option></select><br>
+        <input type="radio" id="gender"> <label for="name">MALE</label>
+        <input type="radio" id="gender"> <label for="name">FEMALE</label>
+
+    </div><br>
+    <div class="opacity-100">
+    <button type="button" class="btn btn-primary">Submit</button> <br><br>
+</div>
+    
+  </div>
+  <hr>
+  <app-cart [aaa]="ProductArray" (bbb)="popData()"></app-cart>

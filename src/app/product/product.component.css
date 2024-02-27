@@ -1,0 +1,47 @@
+.offer{
+    font-weight: bold;
+    color: darkcyan;
+}
+.sold{
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.div{
+    width: 30%;
+    height: 80%;
+    background-color: aquamarine;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+}
+.div2{
+    width: 20%;
+    height: 60%;
+    
+    font-size: medium;
+    display: inline-block;
+     margin-left: 15%;
+     text-align: left;
+    
+}
+
+.div3{
+    width: 40%;
+    height: 60%;
+    text-align: left;
+    font-size: medium;
+    display: inline-block;
+    margin-right: 08%;
+}
+
+
+.SubmitBtn{
+    background-color: peachpuff;
+    border-radius: 5px;
+    border:1px solid grey;
+}
+
+.SubmitBtn:hover{
+    background: blanchedalmond;
+}
